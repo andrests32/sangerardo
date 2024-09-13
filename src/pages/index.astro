@@ -1,0 +1,57 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Hero from "../components/Hero.astro";
+import UnidadEducatica from "../components/UnidadEducatica.astro";
+import Aniversario from "../components/Aniversario.astro";
+import Directivos from "../components/Directivos.astro";
+---
+
+<Layout title="U.E.P San Gerardo">
+  <main>
+    <Navbar />
+    <Hero />
+    <section class="fade-in-on-scroll">
+      <UnidadEducatica />
+    </section>
+    <section class="fade-in-on-scroll">
+      <Aniversario />
+    </section>
+    <section class="fade-in-on-scroll">
+      <Directivos />
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .fade-in-on-scroll {
+    opacity: 0;
+    transform: translateY(50px);
+    transition:
+      opacity 1s ease,
+      transform 1s ease;
+  }
+
+  .fade-in-on-scroll.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const elements = document.querySelectorAll(".fade-in-on-scroll");
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        } else {
+          entry.target.classList.remove("show");
+        }
+      });
+    });
+
+    elements.forEach((el) => observer.observe(el));
+  });
+</script>

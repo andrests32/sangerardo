@@ -1,0 +1,32 @@
+<section class="relative flex items-center justify-center">
+  <video
+    src="/public/intro.mp4"
+    autoplay
+    muted
+    playsinline
+    loop
+    preload="1"
+    class="w-[100vw] h-[100vh] object-cover bg-black"></video>
+
+  <!-- Div vacío con fondo gris oscuro y transparencia -->
+  <div class="absolute inset-0 bg-black opacity-55"></div>
+
+  <!-- Div con los elementos que se colocan encima -->
+  <div class="absolute top-[25rem] flex flex-col items-center gap-5">
+    <figure>
+      <img
+        class="w-[20rem] opacity-90"
+        src="/public/30sg.png"
+        alt="logo San Gerardo"
+      />
+    </figure>
+    <h1 class="text-[5rem] text-center font-body text-white">
+      Unidad Educativa San Gerardo
+    </h1>
+    <h2
+      class="font-heading text-[2rem] text-center font-medium text-white fade-effect font-text"
+    >
+      ¡Gerardino un d&iacute;a, Gerardino toda la vida!
+    </h2>
+  </div>
+</section>

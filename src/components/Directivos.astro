@@ -1,0 +1,65 @@
+---
+const directivos = [
+  {
+    img: "/public/directora.png",
+    directivo: "Violeta Pilco Correa",
+    cargo: "Rectora",
+    lema: "Guiando con visión y excelencia."
+  },
+  {
+    img: "/public/vicerrctora.png",
+    directivo: "Liliana Pozo",
+    cargo: "Vicerrectora",
+    lema: "Comprometida con la calidad educativa."
+  },
+  {
+    img: "/public/directorainicial.png",
+    directivo: "Lucia Pilco Correa",
+    cargo: "Directora Inicial",
+    lema: "Formando bases sólidas para el futuro."
+  },
+  {
+    img: "/public/directoraescuela.png",
+    directivo: "Stephanie Arteaga",
+    cargo: "Directora Escuela",
+    lema: "Fomentando el crecimiento académico."
+  }
+];
+---
+
+<section class="w-full h-auto flex flex-col px-5 gap-5 pt-20">
+  <h2 class="font-body text-[3.5rem] text-center text-[#000000]">Liderazgo Institucional</h2>
+  <p class="font-text text-[1.4rem] text-center text-[#333333] pt-5">
+    Descubre a los directivos que lideran nuestra institución con visión y
+    excelencia, asegurando una educación de calidad en cada etapa de nuestro
+    camino.
+  </p>
+
+  <section class="w-full flex flex-col items-center justify-center pt-20 px-2">
+    <!-- Cards de directivos -->
+    <div class="w-full px-10 py-10">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        {
+          directivos.map((dir) => (
+            <div class="relative bg-white shadow-md rounded-md overflow-hidden">
+              <img
+                class="w-full h-74 object-cover"
+                src={dir.img}
+                alt={dir.directivo}
+              />
+              <div class="absolute inset-x-0 bottom-[4.2rem] bg-black bg-opacity-60 p-4 text-white">
+                <h3 class="text-[2rem] font-bold font-body">{dir.directivo}</h3>
+                <p class="text-[1.5rem] font-text">{dir.cargo}</p>
+              </div>
+              <div class="p-4">
+                <p class="font-body text-[1.5rem] text-center font-normal">
+                  {dir.lema}
+                </p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</section>

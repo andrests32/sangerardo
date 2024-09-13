@@ -1,0 +1,74 @@
+---
+const proyects = [
+  {
+    title: "Artes Vivas",
+    description: "Una exhibición artística llena de creatividad.",
+    img: "/public/project-1.jpg"
+  },
+  {
+    title: "Espacios Lúdicos",
+    description: "Diversión y aprendizaje en un entorno interactivo.",
+    img: "/public/project-2.jpg"
+  },
+  {
+    title: "Desfile Cívico",
+    description: "Celebramos nuestras tradiciones con orgullo.",
+    img: "/public/project-3.jpg"
+  },
+  {
+    title: "Mecatrónica",
+    description: "Innovación tecnológica en cada proyecto.",
+    img: "/public/project-4.jpg"
+  },
+  {
+    title: "Programación",
+    description: "El futuro se escribe con código.",
+    img: "/public/project-5.jpg"
+  },
+  {
+    title: "Deportes",
+    description: "El deporte fortalece cuerpo y mente.",
+    img: "/public/project-6.jpg"
+  }
+];
+---
+
+<section class="flex flex-col gap-10 items-center w-full h-full py-20 px-10">
+  <figure>
+    <img class="w-[12rem]" src="/public/logohero.png" alt="logo San Gerardo" />
+  </figure>
+  <h1 class="font-body text-[3rem] text-center text-[#000000]">
+    Unidad Educativa Particular San Gerardo
+  </h1>
+  <p class="font-text text-[2rem] text-center py-10 text-[#333333]">
+    Inicial, Escuela y Colegio
+  </p>
+
+  <div class="grid grid-cols-1 gap-4 py-10">
+    {
+      proyects.map((project) => (
+        <div class="relative overflow-hidden group cursor-pointer">
+          <img
+            src={project.img}
+            alt={project.title}
+            class="w-full h-[300px] object-cover"
+          />
+          <div class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div class="text-white text-center">
+              <h2 class="font-body text-[4.5rem]">{project.title}</h2>
+              <p class="font-text text-[2.3rem] font-normal mt-2 px-2">
+                {project.description}
+              </p>
+            </div>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  .group:hover .opacity-0 {
+    opacity: 1;
+  }
+</style>
