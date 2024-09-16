@@ -1,22 +1,23 @@
 <section class="relative flex items-center justify-center">
   <video
-    src="/intro.mp4"
-    autoplay
-    muted
-    playsinline
-    loop
-    preload="1"
-    class="w-[100vw] h-[100vh] object-cover bg-black"></video>
+  src="/intro.mp4"
+  autoplay
+  muted
+  playsinline
+  loop
+  preload="none"
+  class="w-[100vw] h-[100vh] object-cover"
+  data-astro-lazy
+></video>
 
-  <!-- Div vacío con fondo gris oscuro y transparencia -->
+
   <div class="absolute inset-0 bg-black opacity-55"></div>
 
-  <!-- Div con los elementos que se colocan encima -->
   <div class="absolute top-[25rem] flex flex-col items-center gap-5">
     <figure>
       <img
         class="w-[20rem] opacity-90"
-        src="/30sg.png"
+        src="/30sg.webp"
         alt="logo San Gerardo"
       />
     </figure>
