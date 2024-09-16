@@ -1,11 +1,11 @@
-<footer class="bg-gray-800 text-white py-8 px-10">
+<footer class="w-full h-auto bg-gray-800 text-white py-20 px-10">
   <div
-    class="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8"
+    class="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10"
   >
     <!-- Acreditaciones y Convenios -->
-    <div>
-      <h3 class="font-body text-[2rem] font-semibold mb-4">
-        Acreditaciones y Convenios
+    <div class="flex flex-col gap-5">
+      <h3 class="font-body text-[2rem] font-semibold">
+        Acreditaciones & Convenios
       </h3>
       <ul>
         <li class="mb-2">✓ Ministerio de Educación</li>
@@ -15,45 +15,62 @@
     </div>
 
     <!-- Dirección y Teléfono -->
-    <div>
-      <h3 class="font-body text-[2rem] font-semibold mb-4">Contacto</h3>
-      <p class="font-text text-[1.5rem] mb-2">
-        Dirección: Av. Siempre Viva 123, Ciudad
-      </p>
-      <p class="font-text text-[1.5rem] mb-2">Teléfono: +593 123 456 789</p>
-      <p class="font-text text-[1.5rem]">
-        Email: <a
+    <div class="flex flex-col gap-5">
+      <h3 class="font-body text-[2rem] font-semibold">Contacto</h3>
+      <div>
+        <p class="font-body text-[1.8rem]">Dirección:</p>
+        <p class="font-text text-white/60 text-[1.5rem]">
+          Edificio Central Bernardo Valdivieso 209-61 y Mercadillo.
+        </p>
+        <p class="font-text text-white/60 text-[1.5rem]">
+          Campus Pompeya Av. Éxodo de Yangana 391-340 Km 3 1/2 a Vilcabamba.
+        </p>
+        <p class="font-text text-white/60 text-[1.5rem]">Loja- Ecuador</p>
+      </div>
+      <div>
+        <p class="font-body text-[1.8rem]">Teléfono:</p>
+        <p class="font-text text-white/60 text-[1.5rem]">
+          07 258 5658 - 07 254 5744
+        </p>
+      </div>
+      <div>
+        <p class="font-body text-[1.8rem]">Email:</p>
+        <a
           href="mailto:info@unidadeducativa.com"
-          class="text-[1.2rem] text-white/60 hover:underline"
+          class="text-[1.5rem] text-white/60 hover:underline"
           >info@unidadeducativa.com</a
         >
-      </p>
+      </div>
     </div>
 
     <!-- Formulario de Denuncias -->
     <div>
-      <h3 class="text-lg font-semibold mb-4">Denuncias</h3>
+      <h3 class="font-body text-[2rem] font-semibold mb-4">Denuncias</h3>
       <form action="/denuncias" method="POST">
-        <div class="mb-4">
-          <label for="nombre" class="block mb-2">Nombre:</label>
+        <div class="mb-6">
+          <label for="nombre" class="font-text text-[1.5rem] block mb-2"
+            >Nombre:</label
+          >
           <input
             type="text"
             id="nombre"
             name="nombre"
-            class="w-full p-2 bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            class="w-full p-3 bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-md font-text text-[1.5rem]"
           />
         </div>
         <div class="mb-4">
-          <label for="mensaje" class="block mb-2">Mensaje:</label>
+          <label for="mensaje" class="font-text text-[1.5rem] block mb-2"
+            >Mensaje:</label
+          >
           <textarea
             id="mensaje"
             name="mensaje"
-            class="w-full p-2 bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            class="w-full p-8 bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-md resize-none font-text text-[1.5rem]"
           ></textarea>
         </div>
         <button
           type="submit"
-          class="w-full bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded"
+          class="w-full bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md text-[1.5rem] font-semibold"
           >Enviar</button
         >
       </form>
@@ -61,7 +78,7 @@
 
     <!-- Redes Sociales -->
     <div>
-      <h3 class="text-lg font-semibold mb-4">Síguenos</h3>
+      <h3 class="text-[2rem] font-semibold mb-4">Síguenos</h3>
       <ul class="flex space-x-4 justify-center md:justify-start">
         <li>
           <a
@@ -70,14 +87,37 @@
             class="hover:text-blue-500"
           >
             <svg
-              class="w-6 h-6"
-              fill="currentColor"
-              viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
-              ><path
-                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 5.197 3.947 9.449 9 9.95v-7.05h-2.167v-2.9H11V9.71c0-2.132 1.292-3.29 3.198-3.29.933 0 1.732.07 1.965.1v2.28H14.53c-1.202 0-1.434.57-1.434 1.405v1.84h2.868l-.375 2.9h-2.493v7.072C18.053 21.448 22 17.197 22 12z"
-              ></path></svg
+              x="0px"
+              y="0px"
+              width="30"
+              height="30"
+              viewBox="0,0,256,256"
             >
+              <g transform=""
+                ><g
+                  fill="#ffffff"
+                  fill-rule="nonzero"
+                  stroke="none"
+                  stroke-width="1"
+                  stroke-linecap="butt"
+                  stroke-linejoin="miter"
+                  stroke-miterlimit="10"
+                  stroke-dasharray=""
+                  stroke-dashoffset="0"
+                  font-family="none"
+                  font-weight="none"
+                  font-size="none"
+                  text-anchor="none"
+                  style="mix-blend-mode: normal"
+                  ><g transform="scale(5.12,5.12)"
+                    ><path
+                      d="M25,3c-12.15,0 -22,9.85 -22,22c0,11.03 8.125,20.137 18.712,21.728v-15.897h-5.443v-5.783h5.443v-3.848c0,-6.371 3.104,-9.168 8.399,-9.168c2.536,0 3.877,0.188 4.512,0.274v5.048h-3.612c-2.248,0 -3.033,2.131 -3.033,4.533v3.161h6.588l-0.894,5.783h-5.694v15.944c10.738,-1.457 19.022,-10.638 19.022,-21.775c0,-12.15 -9.85,-22 -22,-22z"
+                    ></path></g
+                  ></g
+                ></g
+              >
+            </svg>
           </a>
         </li>
         <li>
@@ -87,14 +127,35 @@
             class="hover:text-blue-400"
           >
             <svg
-              class="w-6 h-6"
-              fill="currentColor"
-              viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
-              ><path
-                d="M23.953 4.57c-.885.392-1.83.656-2.825.775a4.92 4.92 0 0 0 2.163-2.724 9.86 9.86 0 0 1-3.13 1.195 4.916 4.916 0 0 0-8.386 4.482A13.94 13.94 0 0 1 1.671 3.149 4.917 4.917 0 0 0 3.194 9.723a4.9 4.9 0 0 1-2.23-.616v.061a4.917 4.917 0 0 0 3.946 4.827 4.902 4.902 0 0 1-2.224.084 4.918 4.918 0 0 0 4.588 3.414 9.86 9.86 0 0 1-7.297 2.032 13.935 13.935 0 0 0 7.548 2.213c9.056 0 14.007-7.503 14.007-14.007 0-.213-.004-.426-.015-.637a10.013 10.013 0 0 0 2.459-2.548z"
-              ></path></svg
+              x="0px"
+              y="0px"
+              width="30"
+              height="30"
+              viewBox="0,0,256,256"
             >
+              <g
+                fill="#ffffff"
+                fill-rule="nonzero"
+                stroke="none"
+                stroke-width="1"
+                stroke-linecap="butt"
+                stroke-linejoin="miter"
+                stroke-miterlimit="10"
+                stroke-dasharray=""
+                stroke-dashoffset="0"
+                font-family="none"
+                font-weight="none"
+                font-size="none"
+                text-anchor="none"
+                style="mix-blend-mode: normal"
+                ><g transform="scale(5.12,5.12)"
+                  ><path
+                    d="M11,4c-3.866,0 -7,3.134 -7,7v28c0,3.866 3.134,7 7,7h28c3.866,0 7,-3.134 7,-7v-28c0,-3.866 -3.134,-7 -7,-7zM13.08594,13h7.9375l5.63672,8.00977l6.83984,-8.00977h2.5l-8.21094,9.61328l10.125,14.38672h-7.93555l-6.54102,-9.29297l-7.9375,9.29297h-2.5l9.30859,-10.89648zM16.91406,15l14.10742,20h3.06445l-14.10742,-20z"
+                  ></path></g
+                ></g
+              >
+            </svg>
           </a>
         </li>
         <li>
@@ -104,31 +165,35 @@
             class="hover:text-pink-500"
           >
             <svg
-              class="w-6 h-6"
-              fill="currentColor"
-              viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
-              ><path
-                d="M12 2.163c3.204 0 3.584.012 4.849.07 1.366.062 2.633.322 3.608 1.297.975.975 1.235 2.242 1.297 3.608.058 1.265.07 1.645.07 4.849s-.012 3.584-.07 4.849c-.062 1.366-.322 2.633-1.297 3.608-.975.975-2.242 1.235-3.608 1.297-1.265.058-1.645.07-4.849.07s-3.584-.012-4.849-.07c-1.366-.062-2.633-.322-3.608-1.297-.975-.975-1.235-2.242-1.297-3.608-.058-1.265-.07-1.645-.07-4.849s.012-3.584.07-4.849c.062-1.366.322-2.633 1.297-3.608.975-.975 2.242-1.235 3.608-1.297 1.265-.058 1.645-.07 4.849-.07M12 0C8.741 0 8.332.013 7.052.073 5.773.133 4.638.405 3.635 1.409c-1.003 1.003-1.276 2.138-1.336 3.417C2.013 5.738 2 6.147 2 9.405s.013 3.668.073 4.948c.06 1.279.332 2.414 1.336 3.417 1.003 1.003 2.138 1.276 3.417 1.336 1.279.06 1.688.073 4.948.073s3.668-.013 4.948-.073c1.279-.06 2.414-.332 3.417-1.336 1.003-1.003 1.276-2.138 1.336-3.417.06-1.279.073-1.688.073-4.948s-.013-3.668-.073-4.948c-.06-1.279-.332-2.414-1.336-3.417C19.414.405 18.279.133 17 .073 15.719.013 15.311 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a3.999 3.999 0 1 1 0-7.998 3.999 3.999 0 0 1 0 7.998zm6.406-11.845a1.44 1.44 0 1 1 0-2.88 1.44 1.44 0 0 1 0 2.88z"
-              ></path></svg
+              x="0px"
+              y="0px"
+              width="30"
+              height="30"
+              viewBox="0,0,256,256"
             >
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://linkedin.com"
-            target="_blank"
-            class="hover:text-blue-700"
-          >
-            <svg
-              class="w-6 h-6"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-              ><path
-                d="M20.447 20.452h-3.554v-5.569c0-1.327-.025-3.038-1.852-3.038-1.854 0-2.138 1.446-2.138 2.941v5.666h-3.554V9h3.414v1.561h.047c.476-.901 1.637-1.852 3.367-1.852 3.598 0 4.262 2.368 4.262 5.448v6.294zM4.909 7.433c-1.144 0-2.067-.927-2.067-2.067 0-1.144.923-2.067 2.067-2.067 1.145 0 2.067.923 2.067 2.067 0 1.145-.922 2.067-2.067 2.067zM6.676 20.452H3.139V9h3.537v11.452zM22.225 0H1.771C.792 0 0 .77 0 1.722v20.551C0 23.231.792 24 1.771 24h20.451c.979 0 1.771-.77 1.771-1.722V1.722C23.996.77 23.204 0 22.225 0z"
-              ></path></svg
-            >
+              <g
+                fill="#ffffff"
+                fill-rule="nonzero"
+                stroke="none"
+                stroke-width="1"
+                stroke-linecap="butt"
+                stroke-linejoin="miter"
+                stroke-miterlimit="10"
+                stroke-dasharray=""
+                stroke-dashoffset="0"
+                font-family="none"
+                font-weight="none"
+                font-size="none"
+                text-anchor="none"
+                style="mix-blend-mode: normal"
+                ><g transform="scale(5.12,5.12)"
+                  ><path
+                    d="M16,3c-7.17,0 -13,5.83 -13,13v18c0,7.17 5.83,13 13,13h18c7.17,0 13,-5.83 13,-13v-18c0,-7.17 -5.83,-13 -13,-13zM37,11c1.1,0 2,0.9 2,2c0,1.1 -0.9,2 -2,2c-1.1,0 -2,-0.9 -2,-2c0,-1.1 0.9,-2 2,-2zM25,14c6.07,0 11,4.93 11,11c0,6.07 -4.93,11 -11,11c-6.07,0 -11,-4.93 -11,-11c0,-6.07 4.93,-11 11,-11zM25,16c-4.96,0 -9,4.04 -9,9c0,4.96 4.04,9 9,9c4.96,0 9,-4.04 9,-9c0,-4.96 -4.04,-9 -9,-9z"
+                  ></path></g
+                ></g
+              >
+            </svg>
           </a>
         </li>
       </ul>
