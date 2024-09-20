@@ -1,1 +1,74 @@
-<h1>soy el about</h1>
+---
+const propuesta = [
+  {
+    img: "/project-6.jpg",
+    text: "Fundado en 1994, el Centro Educativo San Gerardo tiene como misión contribuir al desarrollo integral de los niños preescolares y escolares de Loja. Nuestro enfoque educativo se basa en principios de integración y metodologías pedagógicas innovadoras que estimulan el pensamiento crítico, la creatividad, y la formación de valores sólidos. Fomentamos la participación grupal, la solidaridad y el respeto hacia la naturaleza y los demás, asegurando un ambiente de seguridad, libertad y amistad, fundamentales para el crecimiento personal y el desarrollo pleno de nuestros estudiantes.Con la nueva reforma curricular, brindamos una mayor libertad para que la educación sea más activa y creativa, permitiendo que los niños adopten una actitud crítica, espontánea y participativa en su aprendizaje."
+  },
+  {
+    img: "/propuestaeducativa.png",
+    text: "Aunque el Método Montessori no es nuevo, sigue siendo relevante, ya que las necesidades fundamentales de los niños —como el amor, respeto y tiempo— permanecen invariables, sin importar su raza, sexo, idioma o religión. En nuestro enfoque, los niños son guiados de manera libre y democrática, con la posibilidad de debatir actitudes negativas junto a sus compañeros y profesores. Trabajamos con grupos pequeños para fomentar el equilibrio, la armonía y el desarrollo social a través de proyectos, talleres, actividades ecológicas y juego libre. Este enfoque puede resultar incómodo para algunos padres, ya que sus hijos desarrollan una actitud crítica y formulen preguntas desafiantes. Sin embargo, este cambio es esencial para formar futuros adultos con criterio propio y confianza, capaces de impulsar los cambios que nuestra sociedad necesita."
+  },
+  {
+    img: "/project-2.jpg",
+    text: "Nuestra institución ha adquirido nueve hectáreas y media en el sector de Nueva Pompeya Barrio El Capulí, rodeado de un paisaje acogedor que brinda a nuestros alumnos un entorno natural y tranquilo para su desarrollo. En este espacio, contamos con una infraestructura moderna y funcional, diseñada para que los niños y jóvenes disfruten de comodidad y tecnología acorde con las demandas de la pedagogía actual. Funcionamos con un horario de doble jornada. Por la mañana, se imparten asignaturas básicas como Lenguaje, Matemática, Estudios Sociales, Ciencias Naturales, Inglés, Alemán y Ecología. Por la tarde, ofrecemos actividades extracurriculares como ajedrez, fútbol, gastronomía, danza, música, baloncesto y manualidades, entre otras. Nuestro equipo docente está compuesto por profesionales nacionales y extranjeros, capacitados continuamente en la metodología Montessori. Elaboramos planes de acción que fortalecen los procesos educativos y mejoran las relaciones entre profesores, estudiantes y padres de familia, garantizando un aprendizaje integral."
+  }
+];
+---
+
+<meta charset="UTF-8" />
+<link rel="icon" type="image/x-icon" href="/favicon.png" />
+
+<main>
+  <section class="w-full h-auto flex flex-col gap-10">
+    <div class="w-full h-auto flex flex-col items-center">
+      <figure>
+        <img
+          class="w-full h-[40rem] object-cover"
+          src="/public/historiasg.png"
+          alt="historia san gerardo"
+        />
+      </figure>
+      <img class="w-80 absolute top-[8rem]" src="/public/logohero.png" alt="" />
+      <div
+        class="flex absolute items-center justify-center gap-5 w-[50%] top-[33rem] p-10 bg-white rounded-tl-[2rem] rounded-tr-[2rem] font-body text-[2.2rem] text-[#333333]"
+      >
+        <a href="/">Inicio</a>
+        <span>/</span>
+        <a href="">Nosotros</a>
+      </div>
+    </div>
+    <section class="text-center">
+      <h2 class="font-body font-semibold text-[4rem] text-black py-10 px-20">
+        Tagesschule y Colegio "San Gerardo"
+      </h2>
+      <h3 class="font-text text-[1.8rem] text-center text-[#333333] px-10">
+        Somos una institución educativa comprometida con la formación de
+        estudiantes con pensamiento crítico, investigativo, innovador y
+        creativo. Fomentamos el desarrollo de un criterio amplio y una elevada
+        autoestima, fundamentando su crecimiento en sólidos valores éticos y
+        morales.
+      </h3>
+    </section>
+    <section class="flex flex-col gap-20 p-20">
+      <h3 class="font-body text-center text-[2.5rem]">
+        Propuesta Educativa: Innovación y Valores para un Futuro Brillante
+      </h3>
+      <div class="flex flex-col gap-40">
+        {
+          propuesta.map((propuestas) => (
+            <article class="clearfix">
+              <img
+                class="float-left w-[30rem] h-[30rem] object-cover rounded-lg mr-10 mb-4"
+                src={propuestas.img}
+                alt="imagen referenciales"
+              />
+              <p class="text-justify text-[1.8rem] leading-relaxed text-[#333333]">
+                {propuestas.text}
+              </p>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+  </section>
+</main>
