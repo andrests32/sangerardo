@@ -56,7 +56,7 @@ const propuesta = [
       <div class="flex flex-col gap-40">
         {
           propuesta.map((propuestas) => (
-            <article class="clearfix">
+            <article>
               <img
                 class="float-left w-[30rem] h-[30rem] object-cover rounded-lg mr-10 mb-4"
                 src={propuestas.img}
@@ -68,6 +68,33 @@ const propuesta = [
             </article>
           ))
         }
+      </div>
+    </section>
+S
+    <section class="flex flex-col gap-40 p-20 bg-slate-100">
+      <h2 class="text-center font-body text-[4rem] font-semibold">Nuestros Valores</h2>
+      <div class="flex items-center text-justify gap-20">
+        <img class="w-60" src="/public/mision.png" alt="icono-mision" />
+        <div class="flex flex-col gap-5">
+          <h2 class="font-body text-[3rem] font-semibold">MISIÓN</h2>
+          <span class="font-text text-[2rem] text-justify text-[#333333]">
+            Brindar a nuestros estudiantes una educación de excelente calidad
+            académica; estimulando y desarrollando las capacidades motrices e
+            intelectuales, para afianzar creativamente la convivencia humana por
+            medio de principios y máximas morales y cívicas, y así lograr las
+            metas propuestas en nuestro proyecto educativo.
+          </span>
+        </div>
+      </div>
+
+      <div class="flex flex-row-reverse items-center text-justify gap-20">
+        <img class="w-60" src="/public/vision.png" alt="icono-mision" />
+        <div class="flex flex-col gap-5">
+          <h2 class="font-body text-[3rem] font-semibold">VISIÓN</h2>
+          <span class="font-text text-[2rem] text-justify text-[#333333]">
+            El Tagesschule y Colegio “San Gerardo” siempre será caracterizado por entregar a la sociedad estudiantes: bilingües con una mística humano-cristiana, comprometidos en su desarrollo socio afectivo en busca de una superación personal, además de formarlos críticos y capaces de actuar en el ámbito pluricultural.
+          </span>
+        </div>
       </div>
     </section>
   </section>
