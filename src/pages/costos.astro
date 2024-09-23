@@ -1,0 +1,80 @@
+---
+const costos = [
+  {
+    img: "/public/matinfantil.jpg",
+    titulo: "Pre Escolar",
+    texto: "Ofrecemos un ambiente enriquecedor y seguro, donde los más pequeños aprenden a través del juego y la exploración. Nuestro enfoque se centra en el desarrollo emocional y social, asegurando que cada niño reciba la atención adecuada para un crecimiento óptimo. Inscriba a su hijo y comience su viaje educativo de manera divertida y significativa.",
+    matricula: "$137,30",
+    pension: "$179",
+  },
+  {
+    img: "/public/matescuela.jpg",
+    titulo: "Escuela",
+    texto: "Nos enfocamos en crear un ambiente de aprendizaje dinámico, donde los estudiantes desarrollan no solo sus habilidades académicas, sino también competencias interpersonales. Con un equipo docente comprometido, garantizamos una educación que fomenta la curiosidad y el pensamiento crítico. Inscriba a su hijo y forme parte de nuestra comunidad educativa.",
+    matricula: "$137,30",
+    pension: "$204",
+  },
+  {
+    img: "/public/matcolegio.jpg",
+    titulo: "Colegio",
+    texto: "Nuestra institución se dedica a ofrecer una educación de excelencia, que combina rigor académico con oportunidades de desarrollo personal. A través de programas extracurriculares y un enfoque en el liderazgo, preparamos a los estudiantes para los desafíos del mundo actual. No pierda la oportunidad de inscribir a su hijo en un ambiente que inspira el crecimiento y la superación.",
+    matricula: "$147,47",
+    pension: "$223",
+  },
+]
+---
+
+<meta charset="UTF-8" />
+<link rel="icon" type="image/x-icon" href="/favicon.png" />
+
+<main>
+  <section class="w-full h-auto flex flex-col gap-10">
+    <div class="w-full h-auto flex flex-col items-center">
+      <figure>
+        <img
+          class="w-full h-[40rem] object-cover"
+          src="/public/bgcostos.jpg"
+          alt="historia san gerardo"
+        />
+      </figure>
+      <img class="w-80 absolute top-[8rem]" src="/public/logohero.png" alt="" />
+      <div
+        class="flex absolute items-center justify-center gap-5 w-[50%] top-[33rem] p-10 bg-white rounded-tl-[2rem] rounded-tr-[2rem] font-body text-[2.2rem] text-[#333333]"
+      >
+        <a href="/">Inicio</a>
+        <span>/</span>
+        <a href="">Costos</a>
+      </div>
+    </div>
+
+    <section class="flex flex-col gap-10 p-20">
+      <h2 class="font-body font-semibold text-[2.5rem] text-center">Matrículas: Inversión Transparente en Educación y Valores</h2>
+      <span class="font-text font-medium text-[1.9rem] text-[#333333] text-center"
+        >La matrícula en nuestra unidad educativa es más que un simple costo: es
+        una inversión en el futuro de sus hijos. Con un enfoque en la excelencia
+        académica y la formación en valores, garantizamos que cada recurso
+        invertido se traduzca en oportunidades de crecimiento, aprendizaje y
+        desarrollo integral. ¡Acompáñenos en este camino hacia un futuro
+        brillante!</span
+      >
+    </section>
+
+    <section class="p-10">
+      <div class="flex flex-col gap-10">
+        {costos.map((costo) => (
+          <h2 class="font-body font-semibold text-[4rem] text-start uppercase py-10">{costo.titulo}</h2>
+          <div class="flex gap-10 bg-slate-100 p-5 rounded-lg">
+            <img class="w-80 rounded-lg object-cover" src={costo.img} alt="imagen tipo matricula">
+          <span class="font-text text-justify text-[#333333] text-[1.8rem]">{costo.texto}</span>
+          </div>
+          <div class="flex gap-10 items-center justify-center bg-slate-200 rounded-lg p-5">
+          <span class="font-body text-[2.2rem]">Matricula</span>
+          <span class="font-text text-[#333333] text-[2rem] font-medium">{costo.matricula}</span>
+          <span class="font-body text-[2.2rem]">Pensi&oacute;n</span>
+          <span class="font-text text-[#333333] text-[2rem] font-medium">{costo.pension}</span>
+          </div>
+        ))}
+      </div>
+    </section>
+  </section>
+</main>
