@@ -1,0 +1,159 @@
+---
+const utiles = [
+    {
+        img: "/lista1.png",
+        titulo: "Ardillas",
+        nivel: "Subnivel Inicial 1",
+        link: "",
+    },
+    {
+        img: "/lista2.png",
+        titulo: "Pinguinos",
+        nivel: "Subnivel Inicial 1",
+        link: "",
+    },
+    {
+        img: "/lista3.png",
+        titulo: "Gatos",
+        nivel: "Subnivel Inicial 2",
+        link: "",
+    },
+    {
+        img: "/lista4.png",
+        titulo: "Conejos",
+        nivel: "Subnivel Inicial 2",
+        link: "",
+    },
+    {
+        img: "/lista5.png",
+        titulo: "Osos",
+        nivel: "Primer año de educacion general b&aacute;sica",
+        link: "",
+    },
+    {
+        img: "/lista6.png",
+        titulo: "Leones",
+        nivel: "Segundo año de educaci&oacute;n general b&aacute;sica",
+        link: "",
+    },
+    {
+        img: "/lista7.png",
+        titulo: "Leopardos",
+        nivel: "Tercer año de educaci&oacute;n general b&aacute;sica",
+        link: "",
+    },
+    {
+        img: "/lista8.png",
+        titulo: "Pumas",
+        nivel: "Cuarto año de educaci&oacute;n general b&aacute;sica",
+        link: "",
+    },
+    {
+        img: "/lista9.png",
+        titulo: "Panteras",
+        nivel: "Quinto año de educaci&oacute;n general b&aacute;sica",
+        link: "",
+    },
+    {
+        img: "/lista10.png",
+        titulo: "Tigres",
+        nivel: "Sexto año de educaci&oacute;n general b&aacute;sica",
+        link: "",
+    },
+    {
+        img: "/lista11.png",
+        titulo: "Halcones",
+        nivel: "Septimo año de educaci&oacute;n general b&aacute;sica",
+        link: "",
+    },
+    {
+        img: "/lista8egb.png",
+        titulo: "8vo EGB",
+        nivel: "Octavo año de educaci&oacute;n general b&aacute;sica",
+        link: "",
+    },
+    {
+        img: "/lista9egb.png",
+        titulo: "9no EGB",
+        nivel: "Noveno año de educaci&oacute;n general b&aacute;sica",
+        link: "",
+    },
+    {
+        img: "/lista10egb.png",
+        titulo: "10mo EGB",
+        nivel: "Decimo año de educaci&oacute;n general b&aacute;sica",
+        link: "",
+    },
+    {
+        img: "/lista1bgu.png",
+        titulo: "1ro BGU",
+        nivel: "Primer año de bachillerato general unificado",
+        link: "",
+    },
+    {
+        img: "/lista2bgu.png",
+        titulo: "2do BGU",
+        nivel: "Segundo año de bachillerato general unificado",
+        link: "",
+    },
+    {
+        img: "/lista3bgu.png",
+        titulo: "3ro BGU",
+        nivel: "Tercer año de bachillerato general unificado",
+        link: "",
+    },
+    
+]
+---
+
+<meta charset="UTF-8" />
+<link rel="icon" type="image/x-icon" href="/favicon.png" />
+
+<main>
+  <section class="w-full h-auto flex flex-col gap-10">
+    <div class="w-full h-auto flex flex-col items-center">
+      <figure>
+        <img
+          class="w-full object-cover"
+          src="/bgutilesescolares.jpg"
+          alt="historia san gerardo"
+        />
+      </figure>
+      <img class="w-80 absolute top-[8rem]" src="/logohero.png" alt="" />
+      <div
+        class="flex absolute items-center justify-center gap-5 w-[50%] top-[38rem] p-10 bg-white rounded-tl-[2rem] rounded-tr-[2rem] font-body text-[2.2rem] text-[#333333]"
+      >
+        <a href="/">Inicio</a>
+        <span>/</span>
+        <a>Utiles</a>
+      </div>
+    </div>
+
+    <section class="flex flex-col gap-10 p-20">
+      <h2 class="font-body font-semibold text-[2.5rem] text-center">
+        Lista de Útiles Esenciales para el Éxito Escolar
+      </h2>
+      <span
+        class="font-text font-medium text-[1.9rem] text-[#333333] text-center"
+        >Nuestra selección de útiles escolares ha sido cuidadosamente diseñada
+        para garantizar que cada estudiante cuente con las herramientas
+        necesarias para un aprendizaje eficaz y organizado. Descubre una lista
+        completa que te ayudará a afrontar cada reto académico con confianza y
+        preparación.</span
+      >
+    </section>
+
+    <section class="w-full">
+        <div class="w-full flex flex-col items-center gap-20 p-20">
+            {utiles.map((util) => (
+                <img class=" w-full rounded-xl shadow-md" src={util.img} alt="imagen utiles escolares">
+                <div class="w-full flex flex-col items-start">
+                <p class="font-body text-[4rem] font-semibold">{util.titulo}</p>
+                <span class="font-text text-[2.3rem] text-[#333333] capitalize">{util.nivel}</span>
+                </div>
+                <a href={util.link} class="font-text text-[2rem] text-center text-[#333]/80 cursor-pointer">Descargar Lista Utiles {util.titulo}</a>
+            ))}
+        </div>
+    </section>
+  </section>
+</main>
