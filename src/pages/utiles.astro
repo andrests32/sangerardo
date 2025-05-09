@@ -1,4 +1,6 @@
 ---
+import from './layout/layout.astro'
+
 const utiles = [
     {
         img: "/lista1.png",
@@ -105,9 +107,10 @@ const utiles = [
     
 ]
 ---
+// Se ajusta las etiquetas para envolver todo el componente dentro del Layout. Así se podra usar las 'Props' de astro. En las pestaña del navegador aparecera el título de la pagina a la que corresponde.
 
-<meta charset="UTF-8" />
-<link rel="icon" type="image/x-icon" href="/favicon.png" />
+
+<Layout {title='Utiles'}>
 
 <main>
   <section class="w-full h-auto flex flex-col gap-10">
@@ -157,3 +160,4 @@ const utiles = [
     </section>
   </section>
 </main>
+</Layout>
